@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="No flood risk detected — our ML model predicts a low probability of flooding based on the provided weather parameters.">
+  <meta name="keywords" content="no flood risk, safe conditions, flood prediction result">
+  <meta name="author" content="Rising Waters">
+  <title>✅ No Flood Risk | Rising Waters</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" id="nav-logo">
+        <span>Rising Waters</span> 🌊
+      </a>
+      <div class="nav__links" id="nav-links">
+        <a href="/" class="nav__link" id="nav-home">Home</a>
+        <a href="/predict" class="nav__link" id="nav-predict">Predict</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== RESULT ===== -->
+  <div class="result-wrapper" id="result-wrapper">
+    <div class="glass-card result-card no-flood glass-card--static" id="result-card">
+
+      <!-- Animated Safe Icon -->
+      <span class="alert-icon" id="alert-icon" role="img" aria-label="Safe">✅</span>
+
+      <!-- Title -->
+      <h1 class="result-card__title" id="result-title">NO FLOOD RISK</h1>
+
+      <!-- Description -->
+      <p class="result-card__text" id="result-text">
+        Based on the provided weather parameters, our ML model predicts
+        <strong>LOW probability of flooding.</strong>
+      </p>
+
+      <!-- Divider -->
+      <hr class="result-card__divider" id="result-divider">
+
+      <!-- Status Items -->
+      <ul class="result-card__list" id="status-list">
+        <li class="result-card__list-item" id="status-1">
+          <span class="icon">📊</span>
+          <span>Weather parameters are within normal ranges</span>
+        </li>
+        <li class="result-card__list-item" id="status-2">
+          <span class="icon">🌤️</span>
+          <span>No immediate flood threat detected</span>
+        </li>
+        <li class="result-card__list-item" id="status-3">
+          <span class="icon">📋</span>
+          <span>Continue routine monitoring as scheduled</span>
+        </li>
+        <li class="result-card__list-item" id="status-4">
+          <span class="icon">✅</span>
+          <span>Current conditions are stable</span>
+        </li>
+      </ul>
+
+      <!-- Model Info -->
+      <p class="result-card__model-info" id="model-info">
+        Prediction by XGBoost Classifier &nbsp;|&nbsp; Accuracy: 96.55%
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="btn-group" id="result-actions">
+        <a href="/predict" class="btn btn-success" id="btn-new-prediction">New Prediction →</a>
+        <a href="/" class="btn btn-secondary" id="btn-back-home">Back to Home</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <p>
+        &copy; 2026 <a href="/">Rising Waters</a> &mdash;
+        Built with <span class="footer__heart">♥</span> for disaster preparedness
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

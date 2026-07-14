@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rising Waters — An AI-powered flood prediction system using machine learning to analyze weather parameters and predict flood risks in real time.">
+  <meta name="keywords" content="flood prediction, machine learning, weather analysis, XGBoost, disaster prevention">
+  <meta name="author" content="Rising Waters">
+  <title>Rising Waters | Flood Prediction System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
 
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav" id="navbar">
+    <div class="nav__inner">
+      <a href="/" class="nav__logo" id="nav-logo">
+        <span>Rising Waters</span> 🌊
+      </a>
+      <div class="nav__links" id="nav-links">
+        <a href="/" class="nav__link" id="nav-home">Home</a>
+        <a href="/predict" class="nav__link" id="nav-predict">Predict</a>
+        <a href="#features" class="nav__link" id="nav-features">Features</a>
+        <a href="#about" class="nav__link" id="nav-about">About</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero-section" id="hero">
+    <!-- Decorative floating elements -->
+    <div class="hero__decoration hero__decoration--1"></div>
+    <div class="hero__decoration hero__decoration--2"></div>
+    <div class="hero__decoration hero__decoration--3"></div>
+
+    <div class="hero__content">
+      <span class="hero__badge" id="hero-badge">🛰️ Machine Learning Powered</span>
+      <h1 class="hero__title" id="hero-title">Rising Waters</h1>
+      <p class="hero__subtitle" id="hero-subtitle">A Machine Learning Approach to Flood Prediction</p>
+      <p class="hero__description" id="hero-description">
+        Harness the power of advanced classification algorithms to predict flood risks
+        from real-time weather parameters. Our system analyzes rainfall patterns,
+        cloud coverage, and seasonal data to deliver accurate, life-saving predictions.
+      </p>
+      <div class="hero__cta">
+        <a href="/predict" class="btn btn-primary btn--lg" id="hero-cta-btn">
+          Start Prediction →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES SECTION ===== -->
+  <section class="features-section" id="features">
+    <div class="container">
+      <span class="section-label text-center" style="display:block;">Why Rising Waters</span>
+      <h2 class="features-section__title" id="features-title">Powerful Capabilities</h2>
+      <p class="features-section__subtitle" id="features-subtitle">
+        Built on cutting-edge technology for reliable flood risk assessment
+      </p>
+
+      <div class="feature-grid" id="feature-grid">
+        <!-- Feature 1 -->
+        <div class="glass-card feature-card" id="feature-ml">
+          <span class="feature-card__icon">🤖</span>
+          <h3 class="feature-card__title">ML-Powered</h3>
+          <p class="feature-card__desc">
+            4 classification algorithms including XGBoost with 96.55% accuracy for
+            highly reliable flood probability predictions.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="glass-card feature-card" id="feature-realtime">
+          <span class="feature-card__icon">⚡</span>
+          <h3 class="feature-card__title">Real-Time</h3>
+          <p class="feature-card__desc">
+            Instant flood risk predictions from weather data inputs. Get actionable
+            results in milliseconds, not minutes.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="glass-card feature-card" id="feature-scalable">
+          <span class="feature-card__icon">🌍</span>
+          <h3 class="feature-card__title">Scalable</h3>
+          <p class="feature-card__desc">
+            Cloud-ready deployment architecture for monitoring multiple regions
+            simultaneously with consistent performance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="glass-card about-card glass-card--static" id="about-card">
+        <span class="section-label">How It Works</span>
+        <h2 class="about-card__title" id="about-title">Data-Driven Predictions</h2>
+        <p class="about-card__text" id="about-text-1">
+          Rising Waters uses a trained XGBoost classifier that analyses six key meteorological
+          parameters — annual rainfall, cloud coverage, and seasonal rainfall breakdowns —
+          to determine flood probability for a given region.
+        </p>
+        <p class="about-card__text" id="about-text-2">
+          The model was developed using historical flood and weather datasets, preprocessed
+          with feature scaling, and evaluated against multiple algorithms to select the
+          best-performing classifier for production deployment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <p>
+        &copy; 2026 <a href="/">Rising Waters</a> &mdash;
+        Built with <span class="footer__heart">♥</span> for disaster preparedness
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
